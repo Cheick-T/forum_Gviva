@@ -7,7 +7,7 @@ html {
 }
 
 .text_tr {
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 1;
   overflow : hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -78,7 +78,7 @@ hr.extern {
   background-color:white; /*#ebecf0;*/
   padding: 10px;
   text-align: center;
-  border-bottom: solid 0.1rem #2828d7;
+  border-bottom: solid 0.005rem #2828d7;
 }
 
 .text_1 {
@@ -91,7 +91,7 @@ hr.extern {
 }
 
 .text_1 h1 {
-    color: rgb(4, 4, 138);
+    color: #2828d7;/*rgb(4, 4, 138)*/;
     font-size: 40px;
     font-family: 'Lobster', cursive;
     letter-spacing: 2px;
@@ -167,6 +167,12 @@ hr.extern {
   color: rgb(191, 137, 135);
 }
 
+.textarea {
+  resize: none!important;
+  width: 100%;
+
+}
+
   .img-q{
     margin-top: 0.5rem;
   }
@@ -177,12 +183,16 @@ hr.extern {
       width: calc(100% - 100px);
   }
 
+  #ifh {
+    height: auto;
+  }
+
 }
 
 @media (min-width: 768px) {
   .img-q{
     width: 500px ;
-    height: 300px;
+    height: 250px;
     margin-top: 0.5rem;
   }
 }
@@ -196,3 +206,33 @@ nav {
      color: #ac0707;
      font-weight: bold;
 }
+
+.nav-link {
+  color: #2828d7  !important;
+  font-family: 'Quintessential', cursive !important;
+  font-size: 1.25rem;
+}
+
+.card-header {
+  font-size: 1.5rem;
+}
+
+.chiffres {
+  font-size: 2rem;
+  margin-right: .5rem !important;
+  color: #d32f16;
+  font-weight: 500;
+}
+
+.card-body ul li a {
+  font-size: 1.25rem;
+}
+
+.card-body ul li {
+  margin-bottom: .5rem;
+}
+/*
+input[type="file"] {
+    display: none;
+}
+*/

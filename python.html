@@ -10,7 +10,7 @@
     <!-- personal CSS -->
     <link  rel="stylesheet" type="text/css" href="acceuil.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Welcome page</title>
+    <title>Python_page</title>
   </head>
   <body>
 
@@ -26,7 +26,7 @@
     -->
 
 
-
+    <!--
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid">
             <a class="navbar-brand logo" href="#">G-<span>VIVA</span></a>
@@ -42,12 +42,15 @@
                     <a class="nav-link" href="#">Inscription</a>
                     </li>
                     <li class="nav-item connection">
-                    <a class="nav-link" href="#">Connection</a>
+                    <a class="nav-link" href="#">Connexion</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+-->
+    <iframe id ="ifh" src="header.html" name="header" width="100%" height=100px style="border:none;" ></iframe>
 
     <div class="header">
         <div class ="text_1">
@@ -56,7 +59,7 @@
 
         <div class="center">
             <div class="search__container">
-                <input class="search__input" type="text" placeholder="Search">
+                <input class="search__input" type="text" placeholder="Recherche">
             </div>
             <div class="credits__container">
                 <p class="credits__text">Posez votre problématique ici <a href="question_home.html" class="credits__link">GVIVASERVICES</a></p>
@@ -71,7 +74,9 @@
                     <div class="col-md-12 col-lg-9" >  
                         <section  class="card text-dark border-0 comment">
                             <section v-for="item in commentaires" class="comment my-1 py-1">
+                                <!--
                                 <h2 class="text-center mb-0" style="color: rgb(4, 4, 138);font-family: 'Lobster';"> {{ item.question.titre}}  </h2>
+                                -->
                                 <span class="badge bg-success mr-1" style="font-size: medium;">Traité</span>
                                 <div class="card-body p-4">
                                     <div class="d-flex flex-start">
@@ -87,9 +92,13 @@
                                                 </p>
                                                 
                                             </div>
+                                            <!--
                                             <p class="mb-0 text_tr">
                                                 {{ item.question.contenue}}
+                                                rgb(4, 4, 138)
                                             </p>
+                                            -->
+                                            <h2 class="text-center display-6 mb-0 text_tr" style="color: #d32f16;font-family: 'Lobster';"> {{ item.question.titre}}  </h2>
                                             <img src="https://picsum.photos/200/300" class="rounded mx-auto d-block img-q" style="max-width: 100%;">
                                         </div>
                                         
@@ -111,15 +120,27 @@
                     </div>
                     <div class="col-md-12 col-lg-3" >  
                         <section  class="card text-dark border-0 comment ms-3">
-                            <div class="card text-white bg-danger mb-3" style="max-width: 30rem;">
-                                <div class="card-header">Nos chiffres en Python</div>
-                                <div class="card-body">
-                                    <p>Totol questions : 1200</p>
-                                    <p>Totol réponses : 3000</p>
+                            <div class="card text-white mb-3 shadow" style="color:#2828d7; max-width: 30rem;">
+                                <div class="card-header" style="color:#2828d7;">Nos chiffres en Python</div>
+                                <div class="card-body" style="color:#2828d7;">
+                                      <div class="d-flex flex-start mb-3">
+                                        <span class="chiffres">1200</span> 
+                                        <p class="fw-bold me-4 mt-3">questions posées</p>
+                                    </div> 
+                                                               
+                                    <div class="d-flex flex-start mb-3">
+                                        <span class="chiffres">3000</span> 
+                                        <p class="fw-bold me-4 mt-3">réponses</p>
+                                    </div> 
+
+                                      <div class="d-flex flex-start mb-3">
+                                        <span class="chiffres">10000</span> 
+                                        <p class="fw-bold me-4 mt-3">intervenants</p>
+                                    </div> 
                                 </div>
                             </div>
 
-                            <div class="card text-white bg-info mb-3" style="max-width: 30rem;">
+                            <div class="card text-white mb-3 shadow-sm" style="background-color: #2828d7; max-width: 30rem;">
                                 <div class="card-header">Qui est là ?</div>
                                 <div class="card-body">
                                     <div class="card-body p-4">
@@ -150,7 +171,7 @@
                                 </div>
                             </div>
 
-                            <div class="card text-white bg-success mb-3" style="max-width: 30rem;">
+                            <div class="card text-white mb-3 shadow-lg" style="background-color: #d32f16;max-width: 30rem;">
                                 <div class="card-header">Questions fréquentes</div>
                                 <div class="card-body">
                                     <ul>
@@ -177,11 +198,7 @@
                                             <a href="#"  class="mb-1" style="color:white;">What is the difference between list and tuples in Python?</a>
                                         </li>
                                     </ul>
-                                    
-                                    
-                                    
-                                   
-                                    
+                                     
                                 </div>
                             </div>
                         </section>
@@ -200,7 +217,7 @@
                 commentaires: [
                             {
                                 question:{ 
-                                        titre: ' Lorem ipsum dolor sit amet 1 ?',
+                                        titre: ' Lorem Lorem ipsum dolor sit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. ipsum dolor sit amet 1 ?',
                                         contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
                                         responsable: "Arra Christians",
                                         photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp',
@@ -223,7 +240,7 @@
                              },
                             {
                                 question:{ 
-                                        titre: ' Lorem ipsum dolor sit amet 2 ?',
+                                        titre: ' Lorem ipsum dolor sit consectetur adipiscing elit2  ?',
                                         contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
                                         responsable: "Elysée Christians",
                                          photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp',
@@ -246,7 +263,7 @@
 
                             {
                                 question:{ 
-                                        titre: ' Lorem ipsum dolor sit amet 3 ?',
+                                        titre: ' Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit 3 ?',
                                         contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
                                         responsable: "Junior Franck",
                                          photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(12).webp',

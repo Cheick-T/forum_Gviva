@@ -10,7 +10,14 @@
     <!-- personal CSS -->
     <link  rel="stylesheet" type="text/css" href="acceuil.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <title>Welcome page</title>
+
+    <script src="https://cdn.tiny.cloud/1/1pjkax0k1ha330s036k7na0rq8f2jqexqwfe308b5nlqzq70/tinymce/5/tinymce.min.js" referrerpolicy="Origin"></script>
+        
+    <script src="tinymce\js\tinymce\tinymce.min.js"></script>
+    <script>tinymce.init({selector:'textarea',  skin: "snow",
+                                icons: "thin"});
+    </script> 
+    <title>Squellette</title>
   </head>
   <body>
 
@@ -72,7 +79,7 @@
                     <div class="col-md-12 col-lg-10" >  
                         <section  class="card text-dark border-0 comment">
                             <section v-for="item in commentaires" class="comment">
-                                <h2 class="text-center mb-0" style="color: rgb(4, 4, 138);font-family: 'Lobster';"> {{ item.question.titre}}  </h2>
+                                <h2 class="text-center display-6 mb-0 text_tr" style="color: #d32f16;font-family: 'Lobster';"> {{ item.question.titre}}  </h2>
                                 <div class="card-body p-4">
                                     <div class="d-flex flex-start">
                                         <img class="rounded-circle shadow-1-strong me-3"
@@ -84,13 +91,11 @@
                                                 <p class="mb-0 date">
                                                 {{ item.question.date}}
                                                 </p>
-                                                <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                                                <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-                                                <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
                                             </div>
-                                            <p class="mb-0 text_tr">
+                                            <p class="mb-0" style="font-family:Calibri Italic; font-size: 1.25rem;" >
                                                 {{ item.question.contenue}}
                                             </p>
+                                            <img src="https://picsum.photos/200/300" class="rounded mx-auto d-block img-q" style="max-width: 100%;">
                                         </div>
                                     </div>
                                 </div>
@@ -109,13 +114,11 @@
                                                         <p class="mb-0 date" >
                                                             {{ item.question.reponse1.date}}
                                                         </p>
-                                                        <a href="#!" class="link-muted"><i class="fas fa-pencil-alt ms-2"></i></a>
-                                                        <a href="#!" class="link-muted"><i class="fas fa-redo-alt ms-2"></i></a>
-                                                        <a href="#!" class="link-muted"><i class="fas fa-heart ms-2"></i></a>
                                                     </div>
-                                                    <p class="mb-0 text_tr">
+                                                    <p class="mb-0" style="font-family:Calibri Italic; font-size: 1.25rem;">
                                                         {{ item.question.reponse1.contenue}}
                                                     </p>
+                                                    <img src="https://picsum.photos/200/200" class="rounded mx-auto d-block img-q" style="max-width: 100%;">
                                                 </div>
                                             </div>
                                         </div>
@@ -136,7 +139,7 @@
                                                         {{ item.question.reponse2.date}}
                                                         </p>
                                                        </div>
-                                                    <p class="mb-0 text_tr">
+                                                    <p class="mb-0" style="font-family:Calibri Italic; font-size: 1.25rem;">
                                                         {{ item.question.reponse2.contenue}}
                                                     </p>
                                                 </div>
@@ -145,6 +148,22 @@
                                 </section>
 
                                 <hr class="my-0 extern" />
+                                <form class="mt-2" >
+                                    <div class="border-primary rounded p-2">
+                                        <h3 class="mt-2" style="color: rgb(4, 4, 138);font-family: 'Lobster';">Votre réponse</h3>
+                                        <div class="d-flex flex-row align-items-start">
+                                            <img class="rounded-circle" src="https://i.imgur.com/RpzrMR2.jpg" width="40">
+                                            <textarea id="exemple" class="form-control ml-1 shadow-none textarea" placeholder="Description" rows="10" cols="1000" ></textarea>
+                                        </div>
+                                        <label class="btn btn-outline-primary mt-2">
+                                        <input type="file" id="myFile" name="filename"/>
+                                        </label>
+                                        <div class="mt-2 text-end">
+                                            <button class="btn btn-primary btn-sm shadow-none" type="button">commentter</button>
+                                            <button class="btn btn-outline-primary btn-sm ml-1 shadow-none" type="button">Annuller</button>
+                                        </div>
+                                    </div>
+                                </form>
                             </section>
                         </section>
                     </div>
@@ -152,22 +171,6 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-md-12 col-lg-10">
                         <section  class="card text-dark border-0" style="background-color:#17a2b8;">
-                            <h2 class="text-center mb-0" style="color:white;">Sujets traités </h2>
-                            <div class="container div-centrer">
-                            <div class="row row-cols-2 row-cols-lg-4">
-                                <div class="col">Physique</div>
-                                <div class="col">Mathematique</div>
-                                <div class="col">Anglais</div>
-                                <div class="col">Français</div>
-                                <div class="col">Decouvertes</div>
-                                <div class="col">Python</div>
-                                <div class="col">JavaScript</div>
-                                <div class="col">HTML and CSS</div>
-                                <div class="col">HTML and CSS</div>
-                                <div class="col">HTML and CSS</div>
-                                <div class="col">HTML and CSS</div>
-                            </div>
-                            </div>
                         </section>
 
                     </div>
@@ -207,54 +210,8 @@
                                 },
 
                              },
-                            {
-                                question:{ 
-                                        titre: ' Lorem ipsum dolor sit amet 2 ?',
-                                        contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
-                                        responsable: "Elysée Christians",
-                                         photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(5).webp',
-                                        date: '5 Avril 2022',
-                                    reponse1: {
-                                        contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
-                                        responsable: "Arra Christians",
-                                         photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(7).webp',
-                                        date: '20 Avril 2022',
-                                    },
-                                    reponse2: {
-                                        contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
-                                        responsable: "Cheick",
-                                         photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(8).webp',
-                                        date: '21 Avril 2022',
-                                    }
-                                },
-
-                             },
-
-                            {
-                                question:{ 
-                                        titre: ' Lorem ipsum dolor sit amet 3 ?',
-                                        contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
-                                        responsable: "Junior Franck",
-                                         photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(12).webp',
-                                        date: '1 Avril 2022',
-                                    reponse1: {
-                                        contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
-                                        responsable: "Koudou",
-                                         photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(13).webp',
-                                        date: '2 Avril 2022',
-                                    },
-                                    reponse2: {
-                                        contenue: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis est et eros elementum malesuada.Nam egestas velit laoreet, euismod magna sed, accumsan eros. Fusce tortor magna, scelerisque id nunc nec, feugiat iaculis diam. Curabitur ac diam ac ante pharetra fringilla tincidunt quis diam. Donec maximus magna at egestas consectetur Proin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodalesProin malesuada in arcu at sodales', 
-                                        responsable: "Lokpo J",
-                                         photo: 'https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(15).webp',
-                                        date: '3 Avril 2022',
-                                    }
-                                },
-
-                             },
-                ]
-            }
-        })
+                ]}
+            })
 /*
         var app2 = new Vue({
             el: '#catEl',

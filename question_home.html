@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        
+        
+        
+        <!-- personal CSS -->
+        <link  rel="stylesheet" type="text/css" href="stylequestion.css">
+        <script src="https://cdn.tiny.cloud/1/1pjkax0k1ha330s036k7na0rq8f2jqexqwfe308b5nlqzq70/tinymce/5/tinymce.min.js" referrerpolicy="Origin"></script>
+        
+        <script src="tinymce\js\tinymce\tinymce.min.js"></script>
+        <script>tinymce.init({selector:'textarea',  skin: "snow",
+                                icons: "thin"});</script> 
+        <title>Page de question</title>
+    </head>
+
+    <body>
+
+        <iframe id ="ifh" src="header.html" name="header" width="100%" height=100px style="border:none;" ></iframe>
+        <div class="row">
+            <div class="column side">
+            </div>
+
+            <div class="column middle">
+                <div class="segment">
+                    <h1>Posez votre problème</h1>
+                </div>
+
+                <div class="form-popup" id="myForm">
+                            <label class="text_form">
+                                <input class="text_form__input" type="text" placeholder="Titre"/>
+                            </label>
+                            <label class="text_form">
+                                <textarea id="exemple" class="text_form text_form__input1" placeholder="Description"></textarea>
+                            </label >
+
+                             <div  class="img__input">
+                                <select class="img__input" id="country" name="country">
+                                    <option class="img__input" value="Math">Math</option>
+                                    <option class="img__input" value="Physique">Physique</option>
+                                    <option class="img__input" value="Informatique">Informatique</option>
+                                </select>
+                            </div>
+                        
+                            <input class="img__input" type="file" id="myFile" name="filename"/>
+                            <button class="button-7"  type="button">Soumettre</button>
+                        
+                </div>
+            </div>
+    
+            <div class="column side">
+            </div>
+        </div>
+        
+
+    </body>
+
+    <footer>
+
+    </footer>
+
+
+
+</html>

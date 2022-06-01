@@ -1,0 +1,114 @@
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: white;
+    background-repeat: no-repeat
+}
+
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 0px;
+    background-color: #4D6C92;
+}
+
+.card2 {
+    margin: 0px 40px
+}
+
+.logo {
+    font-size: 40px;
+    font-family: 'Quintessential', cursive;
+    color:#2828d7 !important;
+    text-decoration: none;
+    margin-top: 20px;
+    margin-left: 35px
+}
+
+.logo span {
+  color:#d32f16;
+}
+
+.logo a {
+  text-decoration: none;
+}
+
+.image {
+    width: 360px;
+    height: 280px
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE
+}
+
+.text-center  {
+    color: white;
+    margin-top: 2.5rem;
+}
+
+.titre_1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.text-center ul li a   {
+    text-decoration: none;
+    font-size: 20px;
+    margin-top: 10rem;
+    color: white;
+}
+
+.text-center ul li   {
+    margin-top: 2rem;
+}
+
+/*
+.service {
+    border: 1px solid white;
+    border-radius: 16px;
+    margin-top: 2rem;
+    width: 50%;
+
+}*/
+
+.service  :hover{
+    color: #EDA41E;
+    border-bottom: 4px solid white;
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px
+}
+
+.or {
+    width: 10%;
+    font-weight: bold
+}
+
+.text-sm {
+    font-size: 14px !important
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: 0px
+    }
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px
+    }
+}
